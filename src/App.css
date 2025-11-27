@@ -1,0 +1,149 @@
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background-color: #f5f7fb;
+  position: relative;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+  color: #293264;
+}
+
+body::after {
+  content: "";
+  background-color: #fffad1;
+  width: 300px;
+  height: 235px;
+  top: 0;
+  right: 0;
+  position: fixed;
+  object-fit: cover;
+  -webkit-mask-image: url(./assets/blob.svg);
+  mask-image: url(./assets/blob.svg);
+  mask-repeat: no-repeat;
+  transform: scale(250%) rotate(90deg);
+  z-index: -10;
+}
+
+body::before {
+  content: "";
+  background-color: #deebf8;
+  width: 300px;
+  height: 235px;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  object-fit: cover;
+  -webkit-mask-image: url(./assets/blob.svg);
+  mask-image: url(./assets/blob.svg);
+  mask-repeat: no-repeat;
+  transform: scale(250%) rotate(270deg);
+  z-index: -10;
+}
+
+div.menu {
+  text-align: center;
+}
+
+h1,
+h2 {
+  font-family: "Karla", sans-serif;
+}
+
+.menu > h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.menu > p {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 1rem;
+}
+
+button {
+  font-family: "Inter", sans-serif;
+  background-color: #4d5b9e;
+  color: #f5f7fb;
+  font-weight: 500;
+  font-size: 1rem;
+  width: 193px;
+  height: 52px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  margin: 1rem;
+}
+
+div.quiz-container {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+}
+
+div.quiz-container > .result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.question-container > h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+div.question-container > hr {
+  border: none;
+  background-color: #dbdef0;
+  height: 1px;
+  margin: 0;
+  margin-block: 1rem;
+}
+
+div.answer-choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+div.answer-choices > input[type="radio"] {
+  display: none;
+}
+
+div.answer-choices > label {
+  border: 1px solid #4d5b9e;
+  border-radius: 8px;
+  padding: 5px 10px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+div.answer-choices > label:hover {
+  cursor: pointer;
+}
+
+div.answer-choices > label.correct {
+  background-color: #94d7a2;
+  border: 1px solid #94d7a2;
+}
+
+div.answer-choices > label.checked {
+  background-color: #d6dbf5;
+  border: 1px solid #d6dbf5;
+}
+
+div.answer-choices > label.incorrect {
+  background-color: #f9535b;
+  border: 1px solid #f9535b;
+}
+
+div.answer-choices > label.disabled {
+  opacity: 50%;
+}
