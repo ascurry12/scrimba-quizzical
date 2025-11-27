@@ -1,4 +1,5 @@
 # Quizzical (Scrimba Project) Demo
 
-https://github.com/user-attachments/assets/882a81ec-4720-48b6-8511-8ab2a7d41343
+
+https://github.com/user-attachments/assets/7f796072-6923-4fef-a1f7-f758e7fdbebf
 
