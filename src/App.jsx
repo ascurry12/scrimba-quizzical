@@ -85,13 +85,14 @@ function App() {
                 selections={selections}
                 submitted={quizSubmitted}
                 guesses={allAnswers}
+                reset={gameReset}
               />
             ))}
           <div className="result">
             {quizSubmitted && (
               <p>
                 You scored{" "}
-                {allAnswers.filter((answer) => answer === true).length}/
+                {allAnswers && allAnswers.filter((answer) => answer === true).length}/
                 {quizQuestions && quizQuestions.length} correct answers
               </p>
             )}
